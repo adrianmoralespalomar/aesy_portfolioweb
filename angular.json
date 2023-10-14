@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-app": {
+    "aesy_portfolioweb": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio-app",
+            "outputPath": "dist/aesy_portfolioweb",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolio-app:build:production"
+              "browserTarget": "aesy_portfolioweb:build:production"
             },
             "development": {
-              "browserTarget": "portfolio-app:build:development"
+              "browserTarget": "aesy_portfolioweb:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolio-app:build"
+            "browserTarget": "aesy_portfolioweb:build"
           }
         },
         "test": {
