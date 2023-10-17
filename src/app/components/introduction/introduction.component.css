@@ -1,0 +1,10 @@
+#introductionSection h1{
+    font-size: 5.5rem;
+    color: var(--yellow-color);
+    font-weight: bold;
+    font-style: italic;
+}
+#introductionSection .profileImage{
+    border-radius: 50%;
+    overflow: hidden;
+}

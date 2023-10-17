@@ -1,0 +1,9 @@
+.navbar{
+    background-color: transparent;
+}
+.navbar *{
+    color:var(--white-color) ;
+}
+.navbar .navbar-brand img{
+    height: 80px;
+}
