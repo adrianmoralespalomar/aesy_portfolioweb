@@ -1,0 +1,21 @@
+#skillsSection .skillContainer {
+    position: relative;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+#skillsSection .skillContainer img.skillImage{
+    filter: grayscale(95%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+#skillsSection .skillContainer .skillName {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#skillsSection .skillContainer:hover .skillImage {
+transform: scale(1.1);
+filter: grayscale(0);
+}
+
+#skillsSection .skillContainer:hover .skillName {
+opacity: 1;
+}

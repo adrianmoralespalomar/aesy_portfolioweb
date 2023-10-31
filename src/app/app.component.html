@@ -1,3 +1,26 @@
-<app-header></app-header>
 <app-introduction></app-introduction>
+
+<section class="container">
+    <div class="row row-cols-2">
+        <div class="col">
+            <div class="sticky-top" style="padding-top: 6rem;">
+                <h1 class="titleSection">Adrián</h1>
+                <h2 class="subtitleSection">Full-Stack Software developer</h2>
+                <h5>Focused on creating innovative and efficient technological solutions, with the idea of keep growing by working hard, self-taugh and learning from my co-workers.</h5>
+                <h5>Throughout my career, I have had the opportunity to collaborate with various teams, even having the opportunity to lead and manage small teams.</h5>
+                <app-header></app-header>
+            </div>    
+        </div>  
+        <div class="col">
+            <app-experience></app-experience>   
+            <app-projects></app-projects>
+            <app-skills></app-skills>
+            <app-contact></app-contact>
+        </div>
+        
+    </div>
+</section>
+
 <router-outlet></router-outlet>
+
+<p-scrollTop styleClass="scrolltopButton"></p-scrollTop>

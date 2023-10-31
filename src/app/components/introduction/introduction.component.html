@@ -1,16 +1,19 @@
 <section class="container" id="introductionSection">
     <div class="row">
-        <div class="col">
-            <h1>Adrián Morales Palomar</h1>
-            <div class="row justify-content-start">
-                <div class="col">Full-Stack</div>
-                <div class="col">Perfectionist</div>
-                <div class="col">Rebel</div>
+        <div class="col-7 d-flex align-items-center">
+            <div>
+                <h1 class="titleSection">Adrián Morales Palomar</h1>
+                <h2>Little rebel who has being in love with Technology since very young and started coding at 14 </h2>
+                <div class="snsSection">
+                    <a *ngFor="let el of snsData" class="aesyButton {{el.ClassName}} me-4" href="{{el.Url}}" target="_blank">
+                        <img ngSrc="{{el.SrcIcon}}" alt="{{el.AltImg}}" width="30" height="30" priority>
+                        <span class="{{el.ClassName}}">{{el.Name}}</span>
+                    </a>
+                </div>
             </div>
-            <h4>Since my born fighting againts Great Empire, since my </h4>
         </div>
         <div class="col">
-            <img ngSrc="assets/images/profile.jpg" alt="ProfileImage" class="profileImage" width="400" height="400" priority>
+            <img ngSrc="assets/images/general/profile.jpg" alt="ProfileImage" class="profileImage d-block ms-auto" width="400" height="400" priority>
         </div>
     </div>
 </section>

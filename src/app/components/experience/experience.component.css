@@ -1,0 +1,20 @@
+#experienceSection{
+    margin-bottom: 10rem;
+}
+#experienceSection div.badgetTimeline{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%!important;
+    align-items: center!important;
+    justify-content: center!important;
+    display: flex;
+}
+#experienceSection h5.dateTimeLine{
+    color: var(--gray-color);
+}
+#experienceSection h4.jobTimeLine{
+    font-weight: bold;
+}
+#experienceSection .technologiesTimeLine{
+    margin-right: 1rem;
+}

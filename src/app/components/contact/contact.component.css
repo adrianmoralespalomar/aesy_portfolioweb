@@ -1,0 +1,29 @@
+#formContact{
+    padding-top: 1rem;
+}
+#formContact .containerInputsForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#formContact .containerInputsForm input,#formContact .containerInputsForm textarea{
+    width: 100%;
+}
+#formContact .containerInputsForm .iconInput{
+    right: 0.75rem;
+    color: #ffffff99;
+    position: absolute;
+}
+#formContact .containerInputsForm .iconTextArea{
+    top: 0.75rem;
+}
+#formContact .containerInputsForm input:focus ~ label {
+    font-size: 1rem;
+}
+#contactSection button.aesyButton {
+    font-size: 1.4rem;
+    display: block;
+    margin: auto;
+}

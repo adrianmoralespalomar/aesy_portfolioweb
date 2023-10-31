@@ -1,0 +1,11 @@
+<section class="col row-cols-2" id="skillsSection">
+    <h1 class="titleSection">Skills</h1> 
+    <div class="row row-cols-4 w-100">
+        <div *ngFor="let skill of skillsData" class="col text-center mb-4">
+            <div class="skillContainer">
+                <img ngSrc="{{skill.Src}}" class="skillImage" alt="{{skill.Name}}" width="60" height="60" priority>
+                <span class="d-block mt-2 skillName">{{skill.Name}}</span>
+            </div>
+        </div>
+    </div>
+</section>  

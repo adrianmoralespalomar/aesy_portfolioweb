@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<section class="col" id="projectSection">
+    <h1 class="titleSection">Projects</h1>    
+    <div class="row row-cols-2">
+      <div class="col" *ngFor="let proj of projectData">
+        <div class="imageContainer">
+          <img class="imageBackground" src="{{proj.SrcImage}}" alt="{{proj.Name}} Image">
+          <div class="imageOverlay">
+            <div class="technologiesUsedProjectsSection">
+              <img *ngFor="let tech of proj.Technologies" ngSrc="{{tech.Src}}" alt="{{tech.Name}} Icon" width="30" height="30" priority>
+            </div>
+            <h3>{{proj.Name}}</h3>
+            <span>{{proj.Description}}</span>
+            <a class="aesyButton mt-3" href="{{proj.UrlSource}}" target="_blank">
+              <img ngSrc="assets/images/technologies/githubIcon.png" alt="" width="40" height="40" priority>
+              <span class="">Source</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>  
+</section>  

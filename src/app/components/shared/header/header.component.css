@@ -1,5 +1,6 @@
 .navbar{
     background-color: transparent;
+    margin-bottom: 5rem;
 }
 .navbar *{
     color:var(--white-color) ;
@@ -7,3 +8,47 @@
 .navbar .navbar-brand img{
     height: 80px;
 }
+.navbar ul.navbar-nav{
+    font-size: 1.3rem;
+}
+nav ul.navbar-nav li a{
+    /* display: inline-block; */
+    align-items: center;
+    display: flex;
+    position: relative;
+    transition: all 0.3s;
+    padding-left: 0;
+    color: var(--gray-color);
+}
+nav ul.navbar-nav li a:hover{
+    transform: scale(1.15);
+    color: var(--white-color);
+}
+nav ul.navbar-nav li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: var(--white-color) ;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+nav ul.navbar-nav li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+/*MEDIA QUERIES*/
+/*MD*/
+@media (width <= 991.98px) {
+    nav ul.navbar-nav li a:after {    
+        left: 50%;
+    }
+}
+/* @media (max-width: 991.98px) {
+    nav ul.navbar-nav li a:after {    
+        left: 50%;
+    }
+} */

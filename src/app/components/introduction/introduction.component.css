@@ -1,10 +1,17 @@
+#introductionSection{
+    margin-bottom: 20rem;
+}
 #introductionSection h1{
     font-size: 5.5rem;
-    color: var(--yellow-color);
-    font-weight: bold;
-    font-style: italic;
+    line-height: 85px;
 }
 #introductionSection .profileImage{
+    display: block;
+    margin-left: auto;
     border-radius: 50%;
     overflow: hidden;
+}
+#introductionSection .snsSection{
+    display: flex;
+    align-items: center;
 }
