@@ -1,20 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import emailjs from '@emailjs/browser';
 @Injectable()
 export class ContactService {
-  private baseUrl = 'https://api.tuapp.com'; // Reemplaza esto con la URL de tu servidor de correo
+  constructor() {emailjs.init('Vee_bMPyztndfCc_m')}
 
-  constructor(private http: HttpClient) {}
-
-  SendMail(datos: any): Observable<any> {
-    const url = `${this.baseUrl}/enviar-correo`; // Reemplaza 'enviar-correo' con la ruta real en tu servidor
-
-    // Suponiendo que el servidor espera los datos en un formato específico, como JSON:
-    const body = JSON.stringify(datos);
-
-    // Realizar una solicitud HTTP POST al servidor de correo
-    return this.http.post(url, body);
+  SendMail(datos: any): Promise<any> {
+    return emailjs.send("service_15o2pta","template_r8nz9gl",{
+      from_name: datos.name,
+      to_name: "Adri",
+      from_email: datos.email,
+      subject: datos.subject,
+      message: datos.message
+      });
   }
 }

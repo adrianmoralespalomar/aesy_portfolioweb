@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
 import { Experience } from 'src/app/models/experience';
 import { ExperienceService } from 'src/app/services/experience.service';
+import { ChipModule } from 'primeng/chip';
+import { NgFor } from '@angular/common';
+import { SharedModule } from 'primeng/api';
+import { TimelineModule } from 'primeng/timeline';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.css']
+    selector: 'app-experience',
+    templateUrl: './experience.component.html',
+    styleUrls: ['./experience.component.css'],
+    standalone: true,
+    imports: [TimelineModule, SharedModule, NgFor, ChipModule]
 })
 
 export class ExperienceComponent {

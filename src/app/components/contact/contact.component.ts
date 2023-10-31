@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css'],
+    standalone: true,
+    imports: [ReactiveFormsModule, InputTextModule, InputTextareaModule]
 })
 export class ContactComponent {
   formGroup!: FormGroup;
@@ -19,19 +23,18 @@ export class ContactComponent {
   }
   SendMail() {
     const formData = this.formGroup.value;
-    console.log(formData.name)
     // Llamada al servicio de envío de correo
-    // this.correoService.SendMail(formData).subscribe(
-    //   (response) => {
-    //     // Manejar la respuesta del servidor o del servicio de correo
-    //     console.log('Correo enviado con éxito', response);
-    //     // Puedes mostrar un mensaje de éxito, limpiar el formulario, etc.
-    //   },
-    //   (error) => {
-    //     // Manejar errores
-    //     console.error('Error al enviar el correo', error);
-    //     // Puedes mostrar un mensaje de error o realizar otras acciones necesarias.
-    //   }
-    // );
+    this.correoService.SendMail(formData).then(
+      (response) => {
+        // Manejar la respuesta del servidor o del servicio de correo
+        console.log('Correo enviado con éxito', response);
+        // Puedes mostrar un mensaje de éxito, limpiar el formulario, etc.
+      },
+      (error) => {
+        // Manejar errores
+        console.error('Error al enviar el correo', error);
+        // Puedes mostrar un mensaje de error o realizar otras acciones necesarias.
+      }
+    );
   }
 }
