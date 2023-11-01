@@ -55,6 +55,13 @@ h1{
     color: var(--grayDark-color);
     font-weight: bold;
 }
+/*INPUTS*/
+textarea{
+    resize: vertical;
+    min-height: 45px;
+    max-height: 100px;
+    form-sizing:content;
+}
 /*SCROLL TOP BUTTON*/
 button.scrolltopButton {
     border-radius: 50%;
@@ -73,7 +80,7 @@ button.scrolltopButton:hover {
     border-radius: 0.375rem;
     padding:0.275rem;
     box-shadow: 2px 2px 0px 0px rgba(255,255,255,0.99);
-
+    transition: all 0.3s;
 }
 .aesyButton:hover{
     background-color: var(--grayDark-color);

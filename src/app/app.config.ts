@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from "@angular/common";
-import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import { ApplicationConfig, importProvidersFrom } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
@@ -21,12 +21,23 @@ import { ExperienceService } from "./services/experience.service";
 import { IntroductionService } from "./services/introduction.service";
 import { ProjectService } from "./services/project.service";
 import { SkillsService } from "./services/skills.service";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { LanguageManager } from "./Tools/languagemanager.tool";
 
 export const appConfig:ApplicationConfig={
     providers: [
-        importProvidersFrom(BrowserModule, AppRoutingModule, NgbModule, NgOptimizedImage, TimelineModule, ChipModule, InputTextareaModule, InputTextModule, ScrollTopModule, InputNumberModule, ReactiveFormsModule),
-        IntroductionService, IntroductionRepository, ExperienceService, ExperienceRepository, ProjectService, ProjectRepository, SkillsService, SkillsRepository, ContactService,
+        importProvidersFrom(BrowserModule, AppRoutingModule, NgbModule, NgOptimizedImage, TimelineModule, ChipModule, InputTextareaModule, InputTextModule, ScrollTopModule, InputNumberModule, ReactiveFormsModule,
+        TranslateModule.forRoot({loader:{
+            provide:TranslateLoader,
+            useFactory:HttpLoaderFactory,
+            deps:[HttpClient]
+            }})),
+        IntroductionService, IntroductionRepository, ExperienceService, ExperienceRepository, ProjectService, ProjectRepository, SkillsService, SkillsRepository, ContactService,LanguageManager,
         provideAnimations(),
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withInterceptorsFromDi()),
+        
     ]
 }
+
+export function HttpLoaderFactory(http:HttpClient){return new TranslateHttpLoader(http);}

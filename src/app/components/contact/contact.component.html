@@ -1,26 +1,26 @@
 <section class="col" id="contactSection">
-    <h1 class="titleSection">Contact</h1> 
+    <h1 class="titleSection">{{'contact.title' | translate}}</h1> 
     <form [formGroup]="formGroup" id="formContact">
         <div class="containerInputsForm p-float-label">
             <input type="text" pInputText formControlName="name" id="nameInputForm"/>
-            <label for="nameInputForm">Name</label>
+            <label for="nameInputForm">{{'contact.labelNameInput' | translate}}</label>
             <span class="iconInput material-icons">person</span>
         </div>
         <div class="containerInputsForm p-float-label">
             <input type="text" pInputText formControlName="email" id="emailInputForm"/>
-            <label htmlFor="emailInputForm">Email</label>
+            <label htmlFor="emailInputForm">{{'contact.labelEmailInput' | translate}}</label>
             <span class="iconInput material-icons">alternate_email</span>
         </div>
         <div class="containerInputsForm p-float-label">
             <input type="text" pInputText formControlName="subject" id="subjectInputForm"/>
-            <label htmlFor="subjectInputForm">Asunto</label>
+            <label htmlFor="subjectInputForm">{{'contact.labelSubjectInput' | translate}}</label>
             <span class="iconInput material-icons">help</span>
         </div>
         <div class="containerInputsForm p-float-label">
             <textarea rows="5" pInputTextarea  type="text" formControlName="message" id="messageInputForm"></textarea>
-            <label htmlFor="messageInputForm">Mensaje</label>
+            <label htmlFor="messageInputForm">{{'contact.labelMessageInput' | translate}}</label>
             <span class="iconInput iconTextArea material-icons">chat</span>
         </div>
     </form>
-    <button class="aesyButton greenButton" (click)="SendMail()">Confirm</button>
+    <button class="aesyButton greenButton" (click)="SendMail()">{{'contact.buttonConfirm' | translate}}</button>
 </section>  

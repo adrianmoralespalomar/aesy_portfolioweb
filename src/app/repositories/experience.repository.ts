@@ -12,10 +12,10 @@ export class ExperienceRepository{
   public GetDataFromDataBase(){
     return [
         new Experience(1,
-            'Analyst and ANS Technical Support Manager',
-            'Desarrollo/Maquetación de Aplicaciones Web en NET6 y Angular para BBVA. Coordinador de la ANS encargado resolver incidencias/peticiones de usuarios y evolutivos de aplicaciones.',
+            'experience.jobNeoris.job',
+            'experience.jobNeoris.description',
             'Neoris',
-            'June 2021 - Now',
+            'experience.jobNeoris.date',
             [
                 new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
                 new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
@@ -31,10 +31,10 @@ export class ExperienceRepository{
             '#9C27B0'
         ),
         new Experience(2,
-            'Programmer',
-            'Desarrollo de Aplicaciones Web en NET 3.1 y Angular para Iberdrola.',
+            'experience.jobInforyde.job',
+            'experience.jobInforyde.description',
             'Inforyde',
-            'January 2021 - June 2021',
+            'experience.jobInforyde.date',
             [
                 new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
                 new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
@@ -51,10 +51,10 @@ export class ExperienceRepository{
             '#673AB7'
         ),
         new Experience(3,
-            'Programmer',
-            'Desarrollo de Aplicaciones Web en NET 3.1 y Angular para el Hospital la Paz.',
+            'experience.jobBPR.job',
+            'experience.jobBPR.description',
             'BPR',
-            'July 2019 - January 2021',
+            'experience.jobBPR.date',
             [
                 new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
                 new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
@@ -71,10 +71,10 @@ export class ExperienceRepository{
             '#FF9800'
         ),
         new Experience(3,
-            'Programmer',
-            'Desarrollo de Aplicaciones Web en HTML5, CSS y Bootstrap para diferentes clientes.',
+            'experience.jobElYetiRojo.job',
+            'experience.jobElYetiRojo.description',
             'ElYetiRojo',
-            'June 2015 - September 2016',
+            'experience.jobElYetiRojo.date',
             [
                 new Technology(4,TechnologyConstants.NAME_TECHNOLOGY_BOOTSTRAP,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_BOOTSTRAP),
                 new Technology(5,TechnologyConstants.NAME_TECHNOLOGY_HTML5,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_HTML5),

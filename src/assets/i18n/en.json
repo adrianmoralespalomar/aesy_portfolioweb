@@ -1,0 +1,56 @@
+{
+  "about": {
+    "title": "SNS",
+    "job":"Full-Stack Software developer",
+    "description":"Focused on creating innovative and efficient technological solutions, with the idea of keep growing by working hard, self-taugh and learning from my co-workers.",
+    "description2":"Throughout my career, I have had the opportunity to collaborate with various teams, even having the opportunity to lead and manage small teams."
+  },
+  "contact": {
+    "title": "Contact",
+    "labelNameInput": "Name",
+    "labelEmailInput": "Email",
+    "labelSubjectInput": "Subject",
+    "labelMessageInput": "Message",
+    "buttonConfirm": "Confirm"
+  },
+  "experience": {
+    "title": "Experience",
+    "jobNeoris":{
+        "job":"Analyst/Developer and ANS Technical Support Manager",
+        "description":"Developement and Design of Web Applications in NET6 and Angular for our client BBVA. ANS coordinator in charge of resolving incidents/requests from users and application developments.",
+        "date":"June 2021 - Now"
+    },
+    "jobInforyde":{
+        "job":"Programmer",
+        "description":"Developement of Web Applications in 3.1 and Angular for our client Iberdrola.",
+        "date":"January 2021 - June 2021"
+    },
+    "jobBPR":{
+        "job":"Programmer",
+        "description":"Developement of Web Applications in 3.1 and Angular for our client Hospital La Paz.",
+        "date":"July 2019 - January 2021"
+    },
+    "jobElYetiRojo":{
+        "job":"Programmer",
+        "description":"Developement of Web Applications in HTML5, CSS and Bootstrap for multiple clients.",
+        "date":"June 2015 - September 2016"
+    }
+  },
+  "introduction": {
+    "description": "Little rebel who has being in love with Technology since very young and started coding at my 14",
+    "buttonRepository":"Repository",
+    "buttonLinkedin":"LinkedIn",
+    "buttonDownloadCV":"Download CV"
+  },
+  "projects": {
+    "title": "Projects",
+    "spanSource": "Source"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "titleWeb":{
+    "default":"Adrian | FullStack Developer",
+    "blur":"Don't Leave! Come Back! 😱"
+  }
+}

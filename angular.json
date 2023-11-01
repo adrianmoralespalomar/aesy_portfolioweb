@@ -5,6 +5,7 @@
   "projects": {
     "aesy_portfolioweb": {
       "projectType": "application",
+      
       "schematics": {},
       "root": "",
       "sourceRoot": "src",

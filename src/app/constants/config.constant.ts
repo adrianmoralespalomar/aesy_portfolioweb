@@ -6,8 +6,8 @@ import { GlobalConstants } from './global.constant';
 })
 
 export class ConfigConstants {
-  public static CODE_LANGUAGE_SPAIN = "es-ES";
-  public static CODE_LANGUAGE_ENGLAND = "en-EN";
+  public static CODE_LANGUAGE_SPAIN = "es";
+  public static CODE_LANGUAGE_ENGLAND = "en";
   public static PATH_IMAGES_CONFIG_THEMESELECTOR = GlobalConstants.PATH_IMAGES_GLOBAL + "sunIcon.gif";
   public static PATH_IMAGES_CONFIG_SPAINFLAG = GlobalConstants.PATH_IMAGES_LANGUAGES + "spainflagIcon.png";
   public static PATH_IMAGES_CONFIG_ENGLANDFLAG = GlobalConstants.PATH_IMAGES_LANGUAGES + "britflagIcon.png";

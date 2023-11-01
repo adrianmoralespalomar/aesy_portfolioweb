@@ -1,5 +1,5 @@
 <section class="col" id="experienceSection" style="padding-top: 6rem;">
-    <h1 class="titleSection">Experience</h1>   
+    <h1 class="titleSection">{{'experience.title' | translate}}</h1>   
     <p-timeline [value]="experienceData" styleClass="mt-3">
         <ng-template pTemplate="marker" let-exp>
             <div class="badgetTimeline" [style.backgroundColor]="exp.Color">
@@ -7,9 +7,9 @@
             </div>
         </ng-template>
         <ng-template pTemplate="content" let-exp>
-            <h5 class="dateTimeLine">{{exp.Date}}</h5>
-            <h4 class="jobTimeLine">{{exp.Job}}</h4>
-            <h5>{{exp.Description}}</h5>
+            <h5 class="dateTimeLine">{{exp.Company}} ({{exp.Date | translate}})</h5>
+            <h4 class="jobTimeLine">{{exp.Job | translate}}</h4>
+            <h5>{{exp.Description | translate}}</h5>
             <p-chip *ngFor="let tech of exp.Technologies" label="{{tech.Name}}" image="{{tech.Src}}" styleClass="technologiesTimeLine me-1"></p-chip>
             <div class="w-100 mb-5"></div>
         </ng-template>

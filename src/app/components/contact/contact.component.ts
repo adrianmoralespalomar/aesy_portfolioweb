@@ -3,13 +3,13 @@ import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder } from '@angul
 import { ContactService } from 'src/app/services/contact.service';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.css'],
     standalone: true,
-    imports: [ReactiveFormsModule, InputTextModule, InputTextareaModule]
+    imports: [ReactiveFormsModule,TranslateModule, InputTextModule, InputTextareaModule]
 })
 export class ContactComponent implements OnInit {
   formGroup!: FormGroup;

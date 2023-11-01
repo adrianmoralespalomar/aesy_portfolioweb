@@ -3,6 +3,8 @@ import { NgClass } from '@angular/common';
 import { ConfigConstants } from 'src/app/constants/config.constant';
 import { SqueezeInOut } from 'src/app/animations/squeezeinout.animation';
 import { Subscription, fromEvent } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageManager } from 'src/app/Tools/languagemanager.tool';
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -13,7 +15,7 @@ import { Subscription, fromEvent } from 'rxjs';
 })
 export class ConfigComponent implements OnInit {
 
-  selectedLanguage="";
+  selectedLanguage: string | null | undefined;
   defaultTheme="dark";
   public paththemeSelectorIcon=ConfigConstants.PATH_IMAGES_CONFIG_THEMESELECTOR;
   public pathlanguageIconSpain=ConfigConstants.PATH_IMAGES_CONFIG_SPAINFLAG;
@@ -24,12 +26,12 @@ export class ConfigComponent implements OnInit {
   public isLanguageSelectorClicked:any;
   private clickSubscription: Subscription | undefined;
   @ViewChild('languageSelectorContainer') languageSelectorContainer: ElementRef;
-  constructor() {
+  constructor(private languageManager:LanguageManager) {
     this.languageSelectorContainer = new ElementRef(null);
   }
 
   ngOnInit() {
-    this.selectedLanguage=this.codeLanguageSpain;
+    this.selectedLanguage=localStorage.getItem('lang' || this.codeLanguageSpain );
     //Check if click was outside languageSelectorContainer
     this.clickSubscription = fromEvent(document, 'click').subscribe((event: Event) => {
       if (!this.languageSelectorContainer.nativeElement.contains(event.target) && this.isLanguageSelectorClicked) this.isLanguageSelectorClicked = false;
@@ -45,7 +47,10 @@ export class ConfigComponent implements OnInit {
     this.isThemeSelectorClicked=!this.isThemeSelectorClicked;
   }
   ChangeLanguage(newLanguage:string) {
-    if(this.selectedLanguage!=newLanguage)this.selectedLanguage=newLanguage;
+    if(this.selectedLanguage!=newLanguage){
+      this.selectedLanguage=newLanguage;
+      this.languageManager.SetLanguage(this.selectedLanguage);
+    }
     this.isLanguageSelectorClicked = !this.isLanguageSelectorClicked;
   }
 

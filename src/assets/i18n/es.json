@@ -1,0 +1,56 @@
+{
+  "about": {
+    "title": "SNS",
+    "job":"Desarrollador de Software Full-Stack",
+    "description":"Enfocado en crear soluciones tecnológicas innovadoras y eficientes, con la idea de seguir creciendo a través del trabajo duro, de forma autodidacta y de los conocimientos de mis compañeros de trabajo.",
+    "description2":"A lo largo de mi carrera he trabajado con diversos equipos y ambientes, teniendo incluso la oportunidad de liderar y gestionar equipos pequeños."
+  },
+  "contact": {
+    "title": "Contacto",
+    "labelNameInput": "Nombre",
+    "labelEmailInput": "Correo Electrónico",
+    "labelSubjectInput": "Asunto",
+    "labelMessageInput": "Mensaje",
+    "buttonConfirm": "Confirmar"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobNeoris":{
+        "job":"Analista/Programador y Coordinador de la ANS de Soporte Técnico",
+        "description":"Desarrollo/Maquetación de Aplicaciones Web en NET6 y Angular para nuestro cliente BBVA. Coordinador de la ANS encargado resolver incidencias/peticiones de usuarios y evolutivos de aplicaciones.",
+        "date":"Junio 2021 - Actualidad"
+    },
+    "jobInforyde":{
+        "job":"Programador",
+        "description":"Desarrollo de Aplicaciones Web en NET 3.1 y Angular para nuestro cliente Iberdrola.",
+        "date":"Enero 2021 - Junio 2021"
+    },
+    "jobBPR":{
+        "job":"Programador",
+        "description":"Desarrollo de Aplicaciones Web en NET 3.1 y Angular para nuestro cliente Hospital La Paz.",
+        "date":"Julio 2019 - Enero 2021"
+    },
+    "jobElYetiRojo":{
+        "job":"Programador",
+        "description":"Desarrollo de Aplicaciones Web en HTML5, CSS y Bootstrap para diferentes clientes.",
+        "date":"Junio 2015 - Septiembre 2016"
+    }
+  },
+  "introduction": {
+    "description": "Pequeño rebelde enamorado de la tecnología desde muy pequeño y que empezó a programar a los 14 años.",
+    "buttonRepository":"Repositorio",
+    "buttonLinkedin":"LinkedIn",
+    "buttonDownloadCV":"Descargar CV"
+  },
+  "projects": {
+    "title": "Projectos",
+    "spanSource": "Código"
+  },
+  "skills": {
+    "title": "Conocimientos"
+  },
+  "titleWeb":{
+    "default":"Adrian | Desarrollador FullStack",
+    "blur":"¡No te vayas! ¡Vuelve! 😱"
+  }
+}

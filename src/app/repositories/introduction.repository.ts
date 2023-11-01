@@ -9,9 +9,9 @@ export class IntroductionRepository{
   constructor() {this.sns.next(this.GetDataFromDataBase());}
   public GetDataFromDataBase(){
     return [
-        new SNS(1, 'Repository', 'assets/images/technologies/githubIcon.png', 'githubButton', 'Github Icon','https://github.com/adrianmoralespalomar?tab=repositories'),
-        new SNS(2, 'Linkedin', 'assets/images/technologies/linkedinIcon.png', 'linkedinButton', 'Linkedin Icon','https://www.linkedin.com/in/adrian-morales-palomar-118960186'),
-        new SNS(3, 'Download CV', 'assets/images/technologies/downloadIcon.png', 'greenButton', 'Download Icon'),
+        new SNS(1, 'introduction.buttonRepository', 'assets/images/technologies/githubIcon.png', 'githubButton', 'Github Icon','https://github.com/adrianmoralespalomar?tab=repositories',false),
+        new SNS(2, 'introduction.buttonLinkedin', 'assets/images/technologies/linkedinIcon.png', 'linkedinButton', 'Linkedin Icon','https://www.linkedin.com/in/adrian-morales-palomar-118960186',false),
+        new SNS(3, 'introduction.buttonDownloadCV', 'assets/images/technologies/downloadIcon.png', 'greenButton', 'Download Icon','DownloadCV()',true),
       ];
   }
 }

@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
 import { NgFor, NgOptimizedImage } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.css'],
     standalone: true,
-    imports: [NgFor, NgOptimizedImage]
+    imports: [NgFor, NgOptimizedImage,TranslateModule]
 })
 export class ProjectsComponent {
   public projectData: Project[] = [];

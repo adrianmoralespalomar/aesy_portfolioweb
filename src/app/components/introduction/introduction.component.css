@@ -5,6 +5,9 @@
     font-size: 5.5rem;
     line-height: 85px;
 }
+#introductionSection h2{
+    text-wrap: balance;
+}
 #introductionSection .profileImage{
     display: block;
     margin-left: auto;

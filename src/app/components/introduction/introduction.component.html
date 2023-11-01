@@ -3,12 +3,36 @@
         <div class="col-7 d-flex align-items-center">
             <div>
                 <h1 class="titleSection">Adrián Morales Palomar</h1>
-                <h2>Little rebel who has being in love with Technology since very young and started coding at 14 </h2>
+                <h2>{{'introduction.description' | translate}}</h2>
                 <div class="snsSection">
-                    <a *ngFor="let el of snsData" class="aesyButton {{el.ClassName}} me-4" href="{{el.Url}}" target="_blank">
-                        <img ngSrc="{{el.SrcIcon}}" alt="{{el.AltImg}}" width="30" height="30" priority>
-                        <span class="{{el.ClassName}}">{{el.Name}}</span>
-                    </a>
+                    <!-- <ng-container *ngFor="let el of snsData">
+                        <div *ngIf="el.AsButton === true; else elseBlock">
+                          <button class="aesyButton {{el.ClassName}} me-4" (click)="el.Url" target="_blank">
+                            <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
+                            <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
+                          </button>
+                        </div>
+                        <ng-template #elseBlock>
+                          <div *ngIf="el.AsButton === false">
+                            <a class="aesyButton {{el.ClassName}} me-4" href="{{el.Url}}" target="_blank">
+                              <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
+                              <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
+                            </a>
+                          </div>
+                        </ng-template>
+                    </ng-container> -->
+                    <ng-container *ngFor="let el of snsData">
+                        <button *ngIf="el.AsButton === true; else elseBlock" class="aesyButton me-4 {{el.ClassName}}" (click)="DownloadCV()">
+                            <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
+                            <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
+                          </button>
+                        <ng-template #elseBlock>
+                            <a class="aesyButton me-4 {{el.ClassName}}" href="{{el.Url}}" target="_blank">
+                                <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
+                                <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
+                            </a>
+                        </ng-template>
+                    </ng-container>
                 </div>
             </div>
         </div>

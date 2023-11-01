@@ -1,5 +1,5 @@
 <section class="col" id="projectSection">
-    <h1 class="titleSection">Projects</h1>    
+    <h1 class="titleSection">{{'projects.title' | translate}}</h1>    
     <div class="row row-cols-2">
       <div class="col" *ngFor="let proj of projectData">
         <div class="imageContainer">
@@ -12,7 +12,7 @@
             <span>{{proj.Description}}</span>
             <a class="aesyButton mt-3" href="{{proj.UrlSource}}" target="_blank">
               <img ngSrc="assets/images/technologies/githubIcon.png" alt="" width="40" height="40" priority>
-              <span class="">Source</span>
+              <span>{{'projects.spanSource' | translate}}</span>
             </a>
           </div>
         </div>

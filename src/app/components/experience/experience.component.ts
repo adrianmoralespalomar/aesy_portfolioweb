@@ -5,13 +5,14 @@ import { ChipModule } from 'primeng/chip';
 import { NgFor } from '@angular/common';
 import { SharedModule } from 'primeng/api';
 import { TimelineModule } from 'primeng/timeline';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-experience',
     templateUrl: './experience.component.html',
     styleUrls: ['./experience.component.css'],
     standalone: true,
-    imports: [TimelineModule, SharedModule, NgFor, ChipModule]
+    imports: [TimelineModule,TranslateModule, SharedModule, NgFor, ChipModule]
 })
 
 export class ExperienceComponent {

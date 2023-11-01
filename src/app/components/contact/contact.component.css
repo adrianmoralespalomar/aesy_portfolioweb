@@ -19,7 +19,7 @@
 #formContact .containerInputsForm .iconTextArea{
     top: 0.75rem;
 }
-#formContact .containerInputsForm input:focus ~ label {
+#formContact .containerInputsForm input:focus ~ label,#formContact .containerInputsForm textarea:focus ~ label {
     font-size: 1rem;
 }
 #contactSection button.aesyButton {
