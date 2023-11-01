@@ -61,6 +61,10 @@
     --yellowLight-color: #FADE8E;
     --yellowMedium-color: #C49735;
     --yellowWhite-color: #FEF5DC;
+    --parallax-Background:url("assets/images/general/backgroundWallpaperDarkMode.png");
+}
+:root[data-theme='light']{
+    --parallax-Background:url("assets/images/general/backgroundWallpaperLightMode.png");
 }
 @font-face {
     font-family: Kanit;

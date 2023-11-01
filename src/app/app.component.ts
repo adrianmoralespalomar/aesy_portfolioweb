@@ -11,6 +11,7 @@ import { HostListener } from '@angular/core';
 import { ConfigComponent } from './components/shared/config/config.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageManager } from './Tools/languagemanager.tool';
+import { CookiesManager } from './Tools/cookiesmanager.tool';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -21,7 +22,18 @@ export class AppComponent {
   constructor(private languageManager:LanguageManager){}
   async ngOnInit(){
     this.languageManager.SetDefaultLanguage();
+    document.documentElement.setAttribute('data-theme', CookiesManager.GetCookieValue('theme') || 'dark');
     await this.ChangeDocumentTitle(false);
+    var observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('showSection');
+      }
+      else{
+        entry.target.classList.remove('showSection');
+      }
+    })});
+    var hiddenElements = document.querySelectorAll('.hiddenSection');
+    hiddenElements.forEach((el)=>observer.observe(el));
   }
   @HostListener('window:blur') async onBlur() {
     await this.ChangeDocumentTitle(true);
@@ -29,7 +41,6 @@ export class AppComponent {
   @HostListener('window:focus') async onFocus() {
     await this.ChangeDocumentTitle(false);
   }
-  
   async ChangeDocumentTitle(blur:boolean){
     document.title=blur?await this.languageManager.GetBlurDocumentTitle():await this.languageManager.GetDefaultDocumentTitle();
   }

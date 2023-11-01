@@ -5,6 +5,9 @@
 .navbar *{
     color:var(--white-color) ;
 }
+:root[data-theme='light'] .navbar *{
+    color: var(--black-color);
+}
 .navbar .navbar-brand img{
     height: 80px;
 }

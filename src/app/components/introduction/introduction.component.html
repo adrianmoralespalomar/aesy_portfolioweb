@@ -1,26 +1,10 @@
-<section class="container" id="introductionSection">
+<section class="container hiddenSection" id="introductionSection">
     <div class="row">
         <div class="col-7 d-flex align-items-center">
             <div>
                 <h1 class="titleSection">Adrián Morales Palomar</h1>
                 <h2>{{'introduction.description' | translate}}</h2>
                 <div class="snsSection">
-                    <!-- <ng-container *ngFor="let el of snsData">
-                        <div *ngIf="el.AsButton === true; else elseBlock">
-                          <button class="aesyButton {{el.ClassName}} me-4" (click)="el.Url" target="_blank">
-                            <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
-                            <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
-                          </button>
-                        </div>
-                        <ng-template #elseBlock>
-                          <div *ngIf="el.AsButton === false">
-                            <a class="aesyButton {{el.ClassName}} me-4" href="{{el.Url}}" target="_blank">
-                              <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>
-                              <span class="{{el.ClassName}}">{{el.Name | translate}}</span>
-                            </a>
-                          </div>
-                        </ng-template>
-                    </ng-container> -->
                     <ng-container *ngFor="let el of snsData">
                         <button *ngIf="el.AsButton === true; else elseBlock" class="aesyButton me-4 {{el.ClassName}}" (click)="DownloadCV()">
                             <img [src]="el.SrcIcon" alt="{{el.AltImg}}" width="30" height="30" priority>

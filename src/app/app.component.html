@@ -1,16 +1,16 @@
 <app-config></app-config>
 <app-introduction></app-introduction>
 
-<section class="container">
-    <div class="row row-cols-2">
-        <div class="col">
+<main class="container">
+    <section class="row row-cols-2">
+        <div class="col hiddenSection">
             <div class="sticky-top" style="padding-top: 6rem;">
                 <h1 class="titleSection">Adrián</h1>
                 <h2 class="subtitleSection">{{'about.job' | translate}}</h2>
                 <h5>{{'about.description' | translate}}</h5>
                 <h5>{{'about.description2' | translate}}</h5>
                 <app-header></app-header>
-            </div>    
+            </div>
         </div>  
         <div class="col">
             <app-experience></app-experience>   
@@ -19,8 +19,8 @@
             <app-contact></app-contact>
         </div>
         
-    </div>
-</section>
+    </section>
+</main>
 
 <router-outlet></router-outlet>
 

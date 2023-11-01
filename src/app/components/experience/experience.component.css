@@ -1,5 +1,5 @@
 #experienceSection{
-    margin-bottom: 10rem;
+    margin-bottom: 7rem;
 }
 #experienceSection div.badgetTimeline{
     height: 2rem;
@@ -8,6 +8,7 @@
     align-items: center!important;
     justify-content: center!important;
     display: flex;
+    color: var(--white-color);
 }
 #experienceSection h5.dateTimeLine{
     color: var(--gray-color);
@@ -17,4 +18,18 @@
 }
 #experienceSection .technologiesTimeLine{
     margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+    background-color: #3f4b5b;
+    color: rgba(255, 255, 255, 0.87);
+    border-radius: 16px;
+    padding: 0 0.75rem;
+    overflow: hidden;
+}
+#experienceSection .technologiesTimeLine img{
+    width: 2rem;
+    height: 2rem;
+    margin-left: -0.75rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
 }

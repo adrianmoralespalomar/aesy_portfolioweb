@@ -5,6 +5,7 @@ import { SqueezeInOut } from 'src/app/animations/squeezeinout.animation';
 import { Subscription, fromEvent } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageManager } from 'src/app/Tools/languagemanager.tool';
+import { CookiesManager } from 'src/app/Tools/cookiesmanager.tool';
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -16,7 +17,7 @@ import { LanguageManager } from 'src/app/Tools/languagemanager.tool';
 export class ConfigComponent implements OnInit {
 
   selectedLanguage: string | null | undefined;
-  defaultTheme="dark";
+  selectedTheme: string | null | undefined;
   public paththemeSelectorIcon=ConfigConstants.PATH_IMAGES_CONFIG_THEMESELECTOR;
   public pathlanguageIconSpain=ConfigConstants.PATH_IMAGES_CONFIG_SPAINFLAG;
   public pathlanguageIconBrit=ConfigConstants.PATH_IMAGES_CONFIG_ENGLANDFLAG;
@@ -31,7 +32,8 @@ export class ConfigComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.selectedLanguage=localStorage.getItem('lang' || this.codeLanguageSpain );
+    this.selectedLanguage=CookiesManager.GetCookieValue(ConfigConstants.COOKIE_KEY_LANGUAGE) || this.codeLanguageSpain ;
+    this.selectedTheme=CookiesManager.GetCookieValue(ConfigConstants.COOKIE_KEY_THEME) || "dark";
     //Check if click was outside languageSelectorContainer
     this.clickSubscription = fromEvent(document, 'click').subscribe((event: Event) => {
       if (!this.languageSelectorContainer.nativeElement.contains(event.target) && this.isLanguageSelectorClicked) this.isLanguageSelectorClicked = false;
@@ -43,8 +45,10 @@ export class ConfigComponent implements OnInit {
     }
   }
   ChangeTheme(){
-    this.defaultTheme=this.defaultTheme=="dark"?"light":"dark";
+    this.selectedTheme=this.selectedTheme=="dark"?"light":"dark";
     this.isThemeSelectorClicked=!this.isThemeSelectorClicked;
+    document.documentElement.setAttribute('data-theme', this.selectedTheme);
+    CookiesManager.SetCookieValue(ConfigConstants.COOKIE_KEY_THEME,this.selectedTheme);
   }
   ChangeLanguage(newLanguage:string) {
     if(this.selectedLanguage!=newLanguage){
