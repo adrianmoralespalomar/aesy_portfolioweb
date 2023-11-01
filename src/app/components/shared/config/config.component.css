@@ -1,0 +1,67 @@
+.configSection{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 9rem;
+}
+.configSection img{
+    cursor: pointer;
+    transition: filter 0.3s ease-in-out; /* Aplicamos la transición de los filtros */
+}
+.configSection .themeSelectorIcon {
+    width: 50px;
+    height: 50px;
+}
+.configSection .themeSelectorIcon.light:hover, .configSection .themeSelectorIcon.dark:hover {
+filter: grayscale(40%)  contrast(1) saturate(1);
+}
+.configSection .themeSelectorIcon.dark {
+filter: grayscale(100%) contrast(1) saturate(1);
+}
+.configSection .themeSelectorIcon.light {
+filter:grayscale(0) contrast(1.2) saturate(1.5);
+}
+.languageSelectorContainer {
+    position: relative;
+}
+.languageSelectorContainer img {
+    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+.languageSelectorContainer img:hover {
+    filter: contrast(1.2) saturate(1.5);
+}
+.languageSelectorContainer img.topImage{
+    z-index: 1;
+}
+.languageSelectorContainer.clicked img.bottomImage {
+    animation: reveal 0.3s ease  forwards;
+}
+.languageSelectorContainer.reversed img.bottomImage {
+    animation: hides 0.5s ease forwards;
+}
+@keyframes reveal {
+    from {
+        transform: translateY(0%);      
+    }
+    to {
+        transform: translateY(100%);      
+    }
+}
+@keyframes hides {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  
+  
+  
+  

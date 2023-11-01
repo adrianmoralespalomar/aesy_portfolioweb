@@ -1,0 +1,13 @@
+<section class="container">
+  <div class="row">
+    <div class="col">
+      <div class="configSection">
+        <img [@jelloAnimation]="isThemeSelectorClicked" src="{{paththemeSelectorIcon}}" alt="Theme Selector Icon" [ngClass]="{'jelloHorizontalAnimation': isThemeSelectorClicked}" class="themeSelectorIcon {{defaultTheme}}" priority (click)="ChangeTheme()">
+        <div #languageSelectorContainer class="languageSelectorContainer"[ngClass]="{ 'clicked': isLanguageSelectorClicked==true,'reversed':isLanguageSelectorClicked==false }">
+          <img src="{{pathlanguageIconSpain}}" alt="Spain Flag Icon" [ngClass]="selectedLanguage==codeLanguageSpain ? 'topImage' : 'bottomImage'" (click)="ChangeLanguage(codeLanguageSpain)">
+          <img src="{{pathlanguageIconBrit}}" alt="UK Flag Icon" [ngClass]="selectedLanguage==codeLanguageBrit ? 'topImage' : 'bottomImage'" (click)="ChangeLanguage(codeLanguageBrit)">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

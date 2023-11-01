@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { Experience } from "../models/experience";
 import { Technology } from "../models/technology";
+import { TechnologyConstants } from "../constants/technology.constant";
 
 @Injectable()
 export class ExperienceRepository{
@@ -16,16 +17,16 @@ export class ExperienceRepository{
             'Neoris',
             'June 2021 - Now',
             [
-                new Technology(1,"NET 6","assets/images/technologies/netcoreIcon.png"),
-                new Technology(2,"Angular","assets/images/technologies/angularIcon.png"),
-                new Technology(3,"TypeScript","assets/images/technologies/typescriptIcon.png"),
-                new Technology(4,"Bootstrap","assets/images/technologies/bootstrapIcon.png"),
-                new Technology(5,"HTML5","assets/images/technologies/htmlIcon.png"),
-                new Technology(6,"CSS","assets/images/technologies/cssIcon.png"),
-                new Technology(7,"JavaScript","assets/images/technologies/javascriptIcon.png"),
-                new Technology(8,"Sql Server","assets/images/technologies/sqlIcon.png"),
-                new Technology(9,"Git","assets/images/technologies/gitIcon.png"),
-                new Technology(10,"Jira","assets/images/technologies/jiraIcon.png")
+                new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
+                new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
+                new Technology(3,TechnologyConstants.NAME_TECHNOLOGY_TYPESCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_TYPESCRIPT),
+                new Technology(4,TechnologyConstants.NAME_TECHNOLOGY_BOOTSTRAP,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_BOOTSTRAP),
+                new Technology(5,TechnologyConstants.NAME_TECHNOLOGY_HTML5,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_HTML5),
+                new Technology(6,TechnologyConstants.NAME_TECHNOLOGY_CSS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_CSS),
+                new Technology(7,TechnologyConstants.NAME_TECHNOLOGY_JAVASCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_JAVASCRIPT),
+                new Technology(8,TechnologyConstants.NAME_TECHNOLOGY_SQL,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_SQL),
+                new Technology(9,TechnologyConstants.NAME_TECHNOLOGY_GIT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_GIT),
+                new Technology(10,TechnologyConstants.NAME_TECHNOLOGY_JIRA,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_JIRA),
             ],
             '#9C27B0'
         ),
@@ -35,17 +36,17 @@ export class ExperienceRepository{
             'Inforyde',
             'January 2021 - June 2021',
             [
-                new Technology(1,"NET 3.1","assets/images/technologies/netcoreIcon.png"),
-                new Technology(2,"Angular","assets/images/technologies/angularIcon.png"),
-                new Technology(3,"TypeScript","assets/images/technologies/typescriptIcon.png"),
-                new Technology(4,"Bootstrap","assets/images/technologies/bootstrapIcon.png"),
-                new Technology(5,"HTML5","assets/images/technologies/htmlIcon.png"),
-                new Technology(6,"CSS","assets/images/technologies/cssIcon.png"),
-                new Technology(7,"JavaScript","assets/images/technologies/javascriptIcon.png"),
-                new Technology(8,"Sql Server","assets/images/technologies/sqlIcon.png"),
-                new Technology(9,"Git","assets/images/technologies/gitIcon.png"),
-                new Technology(11,"Azure Devops","assets/images/technologies/azuredevopsIcon.png"),
-                new Technology(12,"Trello","assets/images/technologies/trelloIcon.png")
+                new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
+                new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
+                new Technology(3,TechnologyConstants.NAME_TECHNOLOGY_TYPESCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_TYPESCRIPT),
+                new Technology(4,TechnologyConstants.NAME_TECHNOLOGY_BOOTSTRAP,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_BOOTSTRAP),
+                new Technology(5,TechnologyConstants.NAME_TECHNOLOGY_HTML5,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_HTML5),
+                new Technology(6,TechnologyConstants.NAME_TECHNOLOGY_CSS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_CSS),
+                new Technology(7,TechnologyConstants.NAME_TECHNOLOGY_JAVASCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_JAVASCRIPT),
+                new Technology(8,TechnologyConstants.NAME_TECHNOLOGY_SQL,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_SQL),
+                new Technology(9,TechnologyConstants.NAME_TECHNOLOGY_GIT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_GIT),
+                new Technology(11,TechnologyConstants.NAME_TECHNOLOGY_AZUREDEVOPS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_AZUREDEVOPS),
+                new Technology(12,TechnologyConstants.NAME_TECHNOLOGY_TRELLO,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_TRELLO)
             ],
             '#673AB7'
         ),
@@ -55,17 +56,17 @@ export class ExperienceRepository{
             'BPR',
             'July 2019 - January 2021',
             [
-                new Technology(1,"NET 3.1","assets/images/technologies/netcoreIcon.png"),
-                new Technology(2,"Angular","assets/images/technologies/angularIcon.png"),
-                new Technology(3,"TypeScript","assets/images/technologies/typescriptIcon.png"),
-                new Technology(4,"Bootstrap","assets/images/technologies/bootstrapIcon.png"),
-                new Technology(5,"HTML5","assets/images/technologies/htmlIcon.png"),
-                new Technology(6,"CSS","assets/images/technologies/cssIcon.png"),
-                new Technology(7,"JavaScript","assets/images/technologies/javascriptIcon.png"),
-                new Technology(8,"Sql Server","assets/images/technologies/sqlIcon.png"),
-                new Technology(9,"Git","assets/images/technologies/gitIcon.png"),
-                new Technology(11,"Azure Devops","assets/images/technologies/azuredevopsIcon.png"),
-                new Technology(12,"Trello","assets/images/technologies/trelloIcon.png")
+                new Technology(1,TechnologyConstants.NAME_TECHNOLOGY_NET,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_NET),
+                new Technology(2,TechnologyConstants.NAME_TECHNOLOGY_ANGULAR,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_ANGULAR),
+                new Technology(3,TechnologyConstants.NAME_TECHNOLOGY_TYPESCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_TYPESCRIPT),
+                new Technology(4,TechnologyConstants.NAME_TECHNOLOGY_BOOTSTRAP,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_BOOTSTRAP),
+                new Technology(5,TechnologyConstants.NAME_TECHNOLOGY_HTML5,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_HTML5),
+                new Technology(6,TechnologyConstants.NAME_TECHNOLOGY_CSS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_CSS),
+                new Technology(7,TechnologyConstants.NAME_TECHNOLOGY_JAVASCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_JAVASCRIPT),
+                new Technology(8,TechnologyConstants.NAME_TECHNOLOGY_SQL,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_SQL),
+                new Technology(9,TechnologyConstants.NAME_TECHNOLOGY_GIT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_GIT),
+                new Technology(11,TechnologyConstants.NAME_TECHNOLOGY_AZUREDEVOPS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_AZUREDEVOPS),
+                new Technology(12,TechnologyConstants.NAME_TECHNOLOGY_TRELLO,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_TRELLO)
             ],
             '#FF9800'
         ),
@@ -75,10 +76,10 @@ export class ExperienceRepository{
             'ElYetiRojo',
             'June 2015 - September 2016',
             [
-                new Technology(4,"Bootstrap","assets/images/technologies/bootstrapIcon.png"),
-                new Technology(5,"HTML5","assets/images/technologies/htmlIcon.png"),
-                new Technology(6,"CSS","assets/images/technologies/cssIcon.png"),
-                new Technology(7,"JavaScript","assets/images/technologies/javascriptIcon.png")
+                new Technology(4,TechnologyConstants.NAME_TECHNOLOGY_BOOTSTRAP,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_BOOTSTRAP),
+                new Technology(5,TechnologyConstants.NAME_TECHNOLOGY_HTML5,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_HTML5),
+                new Technology(6,TechnologyConstants.NAME_TECHNOLOGY_CSS,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_CSS),
+                new Technology(7,TechnologyConstants.NAME_TECHNOLOGY_JAVASCRIPT,TechnologyConstants.PATH_IMAGES_TECHNOLOGY_JAVASCRIPT),
             ],
             '#607D8B'
         )

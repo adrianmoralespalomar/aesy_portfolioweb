@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
@@ -11,16 +11,24 @@ import { InputTextModule } from 'primeng/inputtext';
     standalone: true,
     imports: [ReactiveFormsModule, InputTextModule, InputTextareaModule]
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
   formGroup!: FormGroup;
-  constructor(private correoService: ContactService) {
-    this.formGroup = new FormGroup({
-        name: new FormControl(''),
-        email: new FormControl(''),
-        subject: new FormControl(''),
-        message: new FormControl(''),
+
+  constructor(private correoService: ContactService, private formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.initializeFormGroup();
+  }
+
+  initializeFormGroup() {
+    this.formGroup = this.formBuilder.group({
+        name: [''],
+        email: [''],
+        subject: [''],
+        message: [''],
     });
   }
+
   SendMail() {
     const formData = this.formGroup.value;
     // Llamada al servicio de envío de correo
@@ -32,8 +40,9 @@ export class ContactComponent {
       },
       (error) => {
         // Manejar errores
-        console.error('Error al enviar el correo', error);
+        const errorMessage = 'Error al enviar el correo. Por favor, inténtelo de nuevo más tarde.';
         // Puedes mostrar un mensaje de error o realizar otras acciones necesarias.
+        console.error(errorMessage, error);
       }
     );
   }
