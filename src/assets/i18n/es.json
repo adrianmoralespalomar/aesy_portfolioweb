@@ -1,6 +1,6 @@
 {
   "about": {
-    "title": "SNS",
+    "title": "Mis redes",
     "job":"Desarrollador de Software Full-Stack",
     "description":"Enfocado en crear soluciones tecnológicas innovadoras y eficientes, con la idea de seguir creciendo a través del trabajo duro, de forma autodidacta y de los conocimientos de mis compañeros de trabajo.",
     "description2":"A lo largo de mi carrera he trabajado con diversos equipos y ambientes, teniendo incluso la oportunidad de liderar y gestionar equipos pequeños."
@@ -43,7 +43,7 @@
     "buttonDownloadCV":"Descargar CV"
   },
   "projects": {
-    "title": "Projectos",
+    "title": "Proyectos",
     "spanSource": "Código"
   },
   "skills": {

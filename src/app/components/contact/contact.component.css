@@ -1,5 +1,5 @@
-#formContact{
-    padding-top: 1rem;
+#contactSection{
+    padding-top: 10rem;
 }
 #formContact .containerInputsForm {
     display: flex;

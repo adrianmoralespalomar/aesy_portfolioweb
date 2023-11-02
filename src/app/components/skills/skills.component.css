@@ -1,3 +1,6 @@
+#skillsSection  {
+    padding-top: 10rem;
+}
 #skillsSection .skillContainer {
     position: relative;
     transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;

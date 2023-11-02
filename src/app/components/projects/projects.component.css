@@ -1,5 +1,5 @@
 #projectSection{
-    margin-bottom: 10rem;
+	padding-top: 7rem;
 }
 #projectSection .card{
    border-color:var(--yellow-color);
