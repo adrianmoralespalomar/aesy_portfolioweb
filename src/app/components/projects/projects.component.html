@@ -1,7 +1,7 @@
 <section class="col hiddenSection" id="projectSection">
     <h1 class="titleSection">{{'projects.title' | translate}}</h1>    
-    <div class="row row-cols-2">
-      <div class="col" *ngFor="let proj of projectData">
+    <div class="row row-cols-1 row-cols-md-2">
+      <div class="col" *ngFor="let proj of projectData as Project">
         <div class="imageContainer">
           <img class="imageBackground" src="{{proj.SrcImage}}" alt="{{proj.Name}} Image">
           <div class="imageOverlay">
@@ -10,10 +10,16 @@
             </div>
             <h3>{{proj.Name}}</h3>
             <span>{{proj.Description}}</span>
-            <a class="aesyButton mt-3" href="{{proj.UrlSource}}" target="_blank">
-              <img ngSrc="assets/images/technologies/githubIcon.png" alt="" width="40" height="40" priority>
-              <span>{{'projects.spanSource' | translate}}</span>
-            </a>
+            <div class="urlsSection mt-3">
+              <a class="aesyButton" href="{{proj.UrlSource}}" target="_blank">
+                <img ngSrc="assets/images/technologies/githubIcon.png" alt="Icono Github para Portfolio de Adrian Morales" width="40" height="40" priority>
+                <span>{{'projects.spanSource' | translate}}</span>
+              </a>
+              <a *ngIf="proj.UrlWeb != ''" class="aesyButton " href="{{proj.UrlWeb}}" target="_blank">
+                <img style="    padding: 3px;" ngSrc="assets/images/technologies/webIcon.png" alt="Icono Web para Portfolio de Adrian Morales" width="40" height="40" priority>
+                <span>{{'projects.spanWeb' | translate}}</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

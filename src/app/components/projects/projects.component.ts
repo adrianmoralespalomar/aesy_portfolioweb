@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Project } from 'src/app/models/project';
 import { ProjectService } from 'src/app/services/project.service';
-import { NgFor, NgOptimizedImage } from '@angular/common';
+import { NgFor, NgIf, NgOptimizedImage } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { TranslateModule } from '@ngx-translate/core';
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.css'],
     standalone: true,
-    imports: [NgFor, NgOptimizedImage,TranslateModule]
+    imports: [NgFor,NgIf, NgOptimizedImage,TranslateModule]
 })
 export class ProjectsComponent {
   public projectData: Project[] = [];

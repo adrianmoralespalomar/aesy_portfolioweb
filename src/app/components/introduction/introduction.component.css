@@ -18,3 +18,25 @@
     display: flex;
     align-items: center;
 }
+
+@media(width<=992px){
+    #introductionSection h1{
+        font-size: 4.5rem;
+    }
+    #introductionSection .profileImage{
+        width: 300px;
+        height: auto;
+    }
+}
+@media(width<=768px){
+    #introductionSection{
+        margin-bottom: 10rem;
+    }
+    #introductionSection h1{
+        font-size: 2.7rem;
+        line-height: 40px;
+    }
+    #introductionSection .profileImage{
+        margin: auto;
+    }
+}

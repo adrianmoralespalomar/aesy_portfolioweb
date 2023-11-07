@@ -2,6 +2,7 @@
     display: flex;
     justify-content: end;
     padding-bottom: 9rem;
+    max-width: 100%;
 }
 .configSection img{
     cursor: pointer;
@@ -61,7 +62,12 @@ filter:grayscale(0) contrast(1.2) saturate(1.5);
     }
   }
   
-  
+  @media(width<=768px){
+    .configSection{
+        padding-bottom: 1rem;
+        margin-left: -15%;
+    }
+}
   
   
   

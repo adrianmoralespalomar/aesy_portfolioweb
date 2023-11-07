@@ -15,7 +15,13 @@ export class ProjectRepository{
             new Technology(1,"Angular","assets/images/technologies/angularIcon.png"),
             new Technology(4,"Bootstrap","assets/images/technologies/bootstrapIcon.png")
         ],
-        'assets/images/projects/portfolioProject.png','https://github.com/adrianmoralespalomar/aesy_portfolioweb')
+        'assets/images/projects/portfolioProject.png','https://github.com/adrianmoralespalomar/aesy_portfolioweb',''),
+        new Project(1, 'React Tetris', 'Tetris game made with React + Tailwind.',
+        [
+            new Technology(1,"React","assets/images/technologies/reactIcon.png"),
+            new Technology(4,"Tailwind","assets/images/technologies/tailwindIcon.png")
+        ],
+        'assets/images/projects/reacttetrisProject.png','https://github.com/adrianmoralespalomar/aesy_tetris','https://aesy-tetris.vercel.app/')
       ];
   }
 }

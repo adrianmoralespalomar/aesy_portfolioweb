@@ -44,7 +44,8 @@
   },
   "projects": {
     "title": "Projects",
-    "spanSource": "Source"
+    "spanSource": "Source",
+    "spanWeb": "See"
   },
   "skills": {
     "title": "Skills"
