@@ -11,7 +11,13 @@
     "labelEmailInput": "Email",
     "labelSubjectInput": "Subject",
     "labelMessageInput": "Message",
-    "buttonConfirm": "Confirm"
+    "buttonConfirm": "Confirm",
+    "successSendMail":"Éxito",
+    "successMessageSendMail":"Correo ha sido enviado correctamente",
+    "errorSendMail":"Oups, algo ha ido mal",
+    "errorMessageSendMail":"Inténtalo más tarde",
+    "infoSendMail":"Demasiadas peticiones",
+    "infoMessageSendMail":"Debes esperar 1 min para volver a enviar un correo."
   },
   "experience": {
     "title": "Experience",

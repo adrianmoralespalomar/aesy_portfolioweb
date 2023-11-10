@@ -11,7 +11,7 @@ export class SkillsRepository{
   public GetDataFromDataBase(){
     return [
       new Technology(1,"NET 7","assets/images/technologies/netcoreIcon.png"),
-      new Technology(2,"Angular","assets/images/technologies/angularIcon.png"),
+      new Technology(2,"Angular 17","assets/images/technologies/angularIcon.png"),
       new Technology(2,"React","assets/images/technologies/reactIcon.png"),
       new Technology(3,"TypeScript","assets/images/technologies/typescriptIcon.png"),
       new Technology(4,"Tailwind","assets/images/technologies/tailwindIcon.png"),

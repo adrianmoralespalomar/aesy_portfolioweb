@@ -11,7 +11,13 @@
     "labelEmailInput": "Correo Electrónico",
     "labelSubjectInput": "Asunto",
     "labelMessageInput": "Mensaje",
-    "buttonConfirm": "Confirmar"
+    "buttonConfirm": "Confirmar",
+    "successSendMail":"Success",
+    "successMessageSendMail":"Email sent successfully",
+    "errorSendMail":"Oups, something was wrong",
+    "errorMessageSendMail":"Try again later",
+    "infoSendMail":"Too many Requests",
+    "infoMessageSendMail":"You need to wait 1 min to send an email again."
   },
   "experience": {
     "title": "Experiencia",
