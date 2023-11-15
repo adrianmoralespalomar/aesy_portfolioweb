@@ -61,12 +61,12 @@
     --yellowLight-color: #FADE8E;
     --yellowMedium-color: #C49735;
     --yellowWhite-color: #FEF5DC;
-    --parallax-Background:url("assets/images/general/backgroundWallpaperDarkMode.png");
+    --parallax-Background:url("assets/images/general/backgroundWallpaperDarkMode.webp");
 }
 :root[data-theme='light']{
-    --parallax-Background:url("assets/images/general/backgroundWallpaperLightMode.png");
+    --parallax-Background:url("assets/images/general/backgroundWallpaperLightMode.webp");
 }
 @font-face {
     font-family: Kanit;
-    src: url('assets/fonts/Kanit/Kanit.ttf');
+    src: url('assets/fonts/Kanit/Kanit.woff2');
 }
