@@ -1,12 +1,16 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder } from '@angular/forms';
+import { Component, inject, OnInit } from '@angular/core';
 import { ContactService } from 'src/app/services/contact.service';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule
+  } from '@angular/forms';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
-import { TranslateService,TranslateModule } from '@ngx-translate/core';
-import { ToastModule } from 'primeng/toast';
+import { map, Subject, throttleTime } from 'rxjs';
 import { MessageService } from 'primeng/api';
-import { Subject, map, throttleTime } from 'rxjs';
+import { ToastModule } from 'primeng/toast';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
